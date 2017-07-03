@@ -1,0 +1,102 @@
+<html>
+{% load staticfiles %}
+  <head>
+  
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/myblog.css' %}">
+
+  
+  <title>Talwar's Blog</title>
+
+         
+
+
+<style> 
+   input[type=text] {
+    width: 500px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: white;
+    background-position: 100px 100px; 
+    background-repeat: no-repeat;
+    padding: 10px 10px 10px 50px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    padding-left:10px;
+
+    
+}
+
+input[type=text]:focus {
+    width: 60%
+    
+    
+  }
+ 
+
+
+
+</style>
+
+</head>
+
+<body>
+
+
+    <div>
+    
+           <div class ="page-header">
+          <h1><a href ="">Talwar's Blog</a></h1>
+          </div>
+          <nav>
+             <ul>
+                
+                
+                
+              
+                <li><a href="http://127.0.0.1:8000/" target="_parent">
+                <button>Home</button></a></li>
+                 
+                  <li><a href="https://www.quora.com/profile/Talwar-Vivek" target="_parent">
+                <button>About</button></a> </li>
+                <li><a href="#" target="_parent">
+                <button>Our Newsletter</button></a> </li>
+                
+
+
+ 
+                
+               
+              
+
+             </ul>
+
+          </nav>
+
+          
+     </div>
+
+       
+
+ <input type="text" name="search" placeholder="Search by title...">
+ <div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+        {% block content %}
+            {% endblock %}
+
+
+ 
+</div>
+</div>
+</div>
+   
+ 
+
+
+</body>
+</html>
