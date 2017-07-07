@@ -26,7 +26,12 @@ SECRET_KEY = 'fg=5u4zp%84grio+9wonk=9)a@20d+=n=ism^9*rb@c0(y@^na'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+Email_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'vivektalwar13071999@gmail.com'
+EMAIL_HOST_PASSWORD = 'startdnd1909'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Application definition
 
@@ -120,20 +125,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = "/blogger/static/img/"
+STATICFILES_DIRS = [
+  os.path.join(BASE_DIR, "static"),
+]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media_cdn")
 
-import dj_database_url
-DATABASES['default'] = dj_database_url.config()
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-ALLOWED_HOSTS = ['*']
-
-DEBUG = False
-
-try:
-    from .local_settings import *
-except ImportError:
-    pass

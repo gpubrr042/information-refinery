@@ -1,21 +1,25 @@
 <html>
 {% load staticfiles %}
   <head>
-  
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="HandheldFriendly" content="true">
       
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="{% static 'css/myblog.css' %}">
 
   
-  <title>Talwar's Blog</title>
+  <title>Information Refinery</title>
 
          
 
 
 <style> 
    input[type=text] {
-    width: 500px;
+    width: 600px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -26,17 +30,17 @@
     padding: 10px 10px 10px 50px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-    padding-left:10px;
+    padding-left:10px; 
 
     
 }
 
 input[type=text]:focus {
-    width: 60%
+    width: 100%;
     
     
   }
- 
+
 
 
 
@@ -46,25 +50,42 @@ input[type=text]:focus {
 
 <body>
 
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Place this tag where you want the widget to render. -->
+
+
+<!-- Place this tag after the last widget tag. -->
+
+
 
     <div>
     
            <div class ="page-header">
-          <h1><a href ="">Talwar's Blog</a></h1>
+          
+          <h1><a href ="">Information Refinery </a></h1>
+
+
           </div>
           <nav>
              <ul>
                 
-                
+           
                 
               
                 <li><a href="http://127.0.0.1:8000/" target="_parent">
                 <button>Home</button></a></li>
                  
-                  <li><a href="https://www.quora.com/profile/Talwar-Vivek" target="_parent">
+                  <li><a href="http://127.0.0.1:8000/post/about" target="_parent">
                 <button>About</button></a> </li>
-                <li><a href="#" target="_parent">
-                <button>Our Newsletter</button></a> </li>
+                <li><a href="http://127.0.0.1:8000/post/new"  target="_parent">
+                <button>Extras</button></a> </li>
                 
 
 
@@ -82,7 +103,8 @@ input[type=text]:focus {
 
        
 
- <input type="text" name="search" placeholder="Search by title...">
+ 
+
  <div class="content container">
     <div class="row">
         <div class="col-md-8">
@@ -94,9 +116,18 @@ input[type=text]:focus {
 </div>
 </div>
 </div>
-   
- 
+<footer>
+    <div class="footer">
+    
+    <h5>Copyright &copy;2017 Information Refinery,Inc </h5>
+    </div>
+  </footer>
 
+
+
+
+
+   
 
 </body>
 </html>

@@ -1,11 +1,28 @@
 {% extends 'myblog/base.html' %}
+{% load static %}
 
 {% block content %}
+       
    
-        <h2>{{ post.title }}</h2>
+        <h1>{{ post.title }}</h1>
+
         
         <p>{{ post.author|linebreaksbr}}</p>
+        <div>
+        <img src ='{{post.image.url}}' width="720" height="350"/>
+
+       
+
         <p>{{ post.text|linebreaksbr }}</p>
 
-    </div>
+         
+       
+        <div class="fb-like" data-href="http://127.0.0.1:8000/base.html" data-width="320" data-layout="button_count" data-action="like" data-size="small" data-show-
+        faces="true" data-share="true"></div>
+       <div class="fb-comments" data-href="http://127.0.0.1:8000/post_list.html" data-width="751" data-numposts="5"></div>
+       
+
+</div>
+
+ 
 {% endblock %}
